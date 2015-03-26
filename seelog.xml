@@ -1,0 +1,13 @@
+<seelog>
+    <outputs formatid="msg">
+        <splitter>
+            <filter levels="info,error">
+                <file path="test.log"/>
+            </filter>
+            <console />
+        </splitter>
+    </outputs>
+    <formats>
+        <format id="msg" format="[%Date %Time %Ns]: %Msg%n"/>
+    </formats>
+</seelog>
