@@ -37,5 +37,5 @@ echo $Path
 go get github.com/tools/godep
 go get github.com/mitchellh/gox
 go get github.com/ant0ine/go-json-rest/rest
-go get github.com/ogier/pflag
+go get github.com/spf13/pflag
 ```

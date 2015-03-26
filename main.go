@@ -41,8 +41,10 @@ func main() {
             queryString += key + "=" + value[0] + ","
           }
           ip := strings.Split(req.RemoteAddr, ":")[0]
-          formatMessage( &map[string]string{"ip": ip, "params": queryString})
-          w.WriteJson(map[string]string{"status": "ok"})
+          referer := req.Header.Get("Referer")
+          ua := req.Header.Get("User-Agent")
+          formatMessage( &map[string]string{"ip": ip, "referer": referer, "ua": ua, "params": queryString})
+          //w.WriteJson(map[string]string{"status": "ok"})
       }},
   )
   if err != nil {
